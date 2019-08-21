@@ -1,0 +1,9 @@
+---
+applications:
+- name: city-service
+  memory: 1G
+  path: target/cities-service-0.0.1-SNAPSHOT.jar
+# services:
+#   - cities-db
+#   env:
+#     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
