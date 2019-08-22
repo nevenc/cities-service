@@ -13,21 +13,21 @@ Demo project for Spring Boot Beer Lovers.
 * By adding `Dockerfile` you can build the container image, e.g.
 
 ```
-FROM openjdk:8-jdk-alpine
+FROM adoptopenjdk/openjdk11:alpine-jre
 VOLUME /tmp
 ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
+ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 ```
-docker build --build-arg JAR_FILE=target/cities-service-0.0.1-SNAPSHOT.jar -t nevenc/cities-service:0.0.1 -t nevenc/cities-service:latest .
+docker build --build-arg JAR_FILE=target/cities-service-0.0.2-SNAPSHOT.jar -t nevenc/cities-service:0.0.2 -t nevenc/cities-service:latest .
 ```
 
 ## Run Application
 
 ```
-java -jar target/cities-service-0.0.1-SNAPSHOT.jar
+java -jar target/cities-service-0.0.2-SNAPSHOT.jar
 ```
 
 ## Run Application in local Docker
